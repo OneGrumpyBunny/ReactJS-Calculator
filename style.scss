@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat');
+
+$baseGray: #404040;
+$colorBox: 5px 5px 13px 1px lighten($baseGray, 50%);
+$color1: #7978e2;
+$color1Text: 2px 2px 6px lighten($color1, 50%);
+
+$color2: #78b1e2;
+$color2Text: 2px 2px 6px lighten($color2, 50%);
+
+$color3: #e2d078;
+$color3Text: 2px 2px 6px lighten($color3, 50%);
+
+$color4: #f7b7b7;
+$color4Text: 2px 2px 6px lighten($color4, 50%);
+
+$color5: #ca99d2;
+$color5Text: 2px 2px 6px lighten($color5, 50%);
+
+$color6: #a8e9c2;
+$color6Text: 2px 2px 6px lighten($color6, 50%);
+
+$color7: #5ed282;
+$color7Text: 2px 2px 6px lighten($color7, 50%);
+
+$color8: #e27878;
+$color8Text: 2px 2px 6px lighten($color8, 50%);
+
+$color9: #b4ddf1;
+$color9Text: 2px 2px 6px lighten($color9, 50%);
+
+$color0: #9492f4;
+$color0Text: 2px 2px 6px lighten($color0, 50%);
+
+$colordec: #949497;
+$colordecText: 2px 2px 6px lighten($colordec, 50%);
+
+$startingPoint: 9%;
+
+body {
+  font: 100px 'Indie Flower', sans-serif;
+}
+
+.Header {
+    color: $baseGray;
+    text-align:center;
+    line-height: .7;
+    margin-top: 1.5rem;
+  h1 {
+    font-size:30px; 
+  }
+  p {
+    font-size:26px;
+  }
+}
+
+.leftCol {
+  float:left;
+  width:48%;
+}
+.rightCol {
+  float:right;
+  width:48%;
+  padding: 6rem 1rem;
+}
+.display {
+  width: 80%;
+  border: none;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  font: 40px 'Montserrat',sans-serif;
+  color: #e27878;
+  border-bottom: 1px solid rgba(226, 120, 120, 0.42);
+  
+}
+
+.formula {
+  border: none;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #404040;
+}
+.number1{
+  @extend .numberBase;
+  background: $color1;
+  text-shadow: $color1Text;
+  left: $startingPoint*1;
+  top: $startingPoint*1.5;
+}
+
+.number2{
+  @extend .numberBase;
+  background: $color2;
+  text-shadow: $color2Text;
+  left: $startingPoint*2.5;
+  top: $startingPoint*1.2;
+}
+
+.number3{
+  @extend .numberBase;
+  background: $color3;
+  text-shadow: $color3Text;
+  left: $startingPoint*4;
+  top: $startingPoint*1.5;
+}
+
+.number4{
+  @extend .numberBase;
+  background: $color4;
+  text-shadow: $color4Text;
+  left: $startingPoint*1;
+  top: $startingPoint*3.16;
+}
+
+.number5{
+  @extend .numberBase;
+  background: $color5;
+  text-shadow: $color5Text;
+  left: $startingPoint*2.5;
+  top: $startingPoint*2.86;
+}
+
+.number6{
+  @extend .numberBase;
+  background: $color6;
+  text-shadow: $color6Text;
+  left: $startingPoint*4;
+  top: $startingPoint*3.16;
+}
+
+.number7{
+  @extend .numberBase;
+  background: $color7;
+  text-shadow: $color7Text;
+  left: $startingPoint*1;
+  top: $startingPoint*4.82;
+}
+
+.number8{
+  @extend .numberBase;
+  background: $color8;
+  text-shadow: $color8Text;
+  left: $startingPoint*2.5;
+  top: $startingPoint*4.52;
+}
+
+.number9{
+  @extend .numberBase;
+  background: $color9;
+  text-shadow: $color9Text;
+  left: $startingPoint*4;
+  top: $startingPoint*4.82;
+}
+
+.numberdec{
+  @extend .numberBase;
+  background: $colordec;
+  text-shadow: $colordecText;
+  left: $startingPoint*1;
+  top: $startingPoint*6.48;
+}
+
+.number0{
+  @extend .numberBase;
+  background: $color0;
+  text-shadow: $color0Text;
+  left: $startingPoint*2.5;
+  top: $startingPoint*6.18;
+}
+
+.numberclear{
+  @extend .numberBase;
+  background: $colordec;
+  text-shadow: $colordecText;
+  left: $startingPoint*4;
+  top: $startingPoint*6.48;
+}
+
+.numberBase {  
+  width:120px;
+  height: 120px;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  color: $baseGray; 
+  box-shadow: $colorBox;
+  cursor: pointer;
+  &:hover {border:1px solid $baseGray}
+}
+.operator1,
+.operator2,
+.operator3,
+.operator4{
+  @extend .operator;
+  text-shadow: $color0Text;
+}
+  .operator {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  background: $color0;
+  text-shadow: $color0Text;
+  cursor: pointer; 
+  margin:15px;
+  font-size: 50%;
+  border: 1px solid $baseGray;
+  &:hover {border:1px solid #ffffff}
+}
+
+.equal {
+  @extend .operator;
+  width:150px;
+  height:150px;
+  margin-top: 6rem;
+  text-shadow: $color0Text;
+}
+
+.activate {
+  animation: .5s buttonPress ease-in;
+}
+
+@keyframes buttonPress {
+  50% {
+    background-color: $baseGray;
+    color: #fff;
+    box-shadow: -1px -1px 17px 1px $baseGray;
+    transform: translateY(4px);
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .numberBase {
+    width: 55px;
+    height: 55px;
+    font-size: 38%;
+    margin: 10px;
+  }
+  .operator, .operator1, .operator2, .operator3, .operator4 {
+    width: 45px;
+    height: 45px;
+    margin: 3% auto;
+    font-size: 25%;
+    display:flex;
+  }   
+  .equal {
+      width: 65Px;
+      height: 65px;
+      margin-top: 1rem;
+  }
+  .formula {
+      font-size: 15px;
+      height: auto;
+    font-size: 15px !important;
+  }
+
+  .display {
+      width: 65%;
+      font: 30px 'Montserrat',sans-serif;
+      height:auto;
+  }
+  .rightCol {
+      width: 42%;
+      padding: 0rem 1rem;
+  }
+  .leftCol div {
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 3rem;
+  }
+  
+  .rightCol div {
+      margin-bottom: -1rem;
+  }
+  
+}
