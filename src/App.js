@@ -1,50 +1,26 @@
-const buttonIsNumber = /[0123456789]/,
-  isOperator = /[/x+‑]/,
-  endsWithOperator = /[x+/‑]$/,
-  endsWithNegativeSign = /[x/+‑]$/,
-  clearStyle = { background: "#ac3939" },
-  operatorStyle = { background: "#666666" },
-  equalsStyle = {
+import React from 'react';
+import Buttons from './Buttons';
+
+const buttonIsNumber = /[0123456789]/;
+const isOperator = /[/x+‑]/;
+const endsWithOperator = /[x+/‑]$/;
+const endsWithNegativeSign = /[x/+‑]$/;
+const clearStyle = { background: "#ac3939" };
+const operatorStyle = { background: "#666666" };
+const equalsStyle = {
     background: "#004466",
     position: "absolute",
     height: 130,
     bottom: 5
   };
-            
-class Buttons extends React.Component {
-  constructor(props) {
-    super(props);
-    
-  } 
-  
-  render() {
-    const calcButtons = this.props.buttonset.map((i) => {
-      return(
-        <div id={i.id} 
-            className={i.class} 
-            title={i.id} 
-            keyCode={i.value}
-            onClick={() => {this.props.calculate(i.value)}}>
-            {i.value}
-        </div>
-      )
-    });       
-    
-      return(
-        <div>
-          {calcButtons}
-        </div>
-      ) 
-    }
-  }
 
 class App extends React.Component {
   constructor(props) {
     super(props);
      this.state = {
-        numberSet: numbers,
-        operatorSet: operators,
-        equalSet: equals,
+        numberSet: buttonSets.numbers,
+        operatorSet: buttonSets.operators,
+        equalSet: buttonSets.equals,
         currentVal: "0",
         prevVal: "0",
         formula: "",
@@ -248,101 +224,103 @@ class App extends React.Component {
   }
 }
 
-const equals = [
-  {
-    id: 'equals',
-    class: 'equal',
-    value: '=',
-    action: 'equals'
-  }
+const buttonSets = {
+  equals: [
+      {
+      id: 'equals',
+      class: 'equal',
+      value: '=',
+      action: 'equals'
+      }
+  ],
+  operators: [
+      {
+      id: 'divide',
+      class: 'operator1',
+      value: '/',
+      action: 'divide'
+      },
+      {
+      id: 'multiply',
+      class: 'operator2',
+      value: 'x',
+      action: 'multiply'
+      },
+      {
+      id: 'add',
+      class: 'operator3',
+      value: '+',
+      action: 'add'
+      },
+      {
+      id: 'subtract',
+      class: 'operator4',
+      value: '‑',
+      action: 'subtract'
+      }
+  ],
+  numbers: [ 
+      {
+      id: 'one',
+      value: '1',
+      class: 'number1'    
+      },
+      {
+      id: 'two',
+      value: '2',
+      class: 'number2'
+      },
+      {
+      id: 'three',
+      value: '3',
+      class: 'number3'
+      },
+      {
+      id: 'four',
+      value: '4',
+      class: 'number4'
+      },
+      {
+      id: 'five',
+      value: '5',
+      class: 'number5'
+      },
+      {
+      id: 'six',
+      value: '6',
+      class: 'number6'
+      },
+      {
+      id: 'seven',
+      value: '7',
+      class: 'number7'
+      },
+      {
+      id: 'eight',
+      value: '8',
+      class: 'number8'
+      },
+      {
+      id: 'nine',
+      value: '9',
+      class: 'number9'
+      },
+      {
+      id: 'zero',
+      value: '0',
+      class: 'number0'
+      },
+      {
+      id: 'decimal',
+      value: '.',
+      class: 'numberdec'
+      },
+      {
+      id: 'clear',
+      value: 'c',
+      class: 'numberclear'
+      }
   ]
-const operators = [
-  {
-    id: 'divide',
-    class: 'operator1',
-    value: '/',
-    action: 'divide'
-  },
-  {
-    id: 'multiply',
-    class: 'operator2',
-    value: 'x',
-    action: 'multiply'
-  },
-  {
-    id: 'add',
-    class: 'operator3',
-    value: '+',
-    action: 'add'
-  },
-  {
-    id: 'subtract',
-    class: 'operator4',
-    value: '‑',
-    action: 'subtract'
-  }
-]
-const numbers = [ 
-  {
-    id: 'one',
-    value: '1',
-    class: 'number1'    
-  },
-  {
-    id: 'two',
-    value: '2',
-    class: 'number2'
-  },
-  {
-    id: 'three',
-    value: '3',
-    class: 'number3'
-  },
-  {
-    id: 'four',
-    value: '4',
-    class: 'number4'
-  },
-  {
-    id: 'five',
-    value: '5',
-    class: 'number5'
-  },
-  {
-    id: 'six',
-    value: '6',
-    class: 'number6'
-  },
-  {
-    id: 'seven',
-    value: '7',
-    class: 'number7'
-  },
-  {
-    id: 'eight',
-    value: '8',
-    class: 'number8'
-  },
-  {
-    id: 'nine',
-    value: '9',
-    class: 'number9'
-  },
-  {
-    id: 'zero',
-    value: '0',
-    class: 'number0'
-  },
-  {
-    id: 'decimal',
-    value: '.',
-    class: 'numberdec'
-  },
-  {
-    id: 'clear',
-    value: 'c',
-    class: 'numberclear'
-  }
-]
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;

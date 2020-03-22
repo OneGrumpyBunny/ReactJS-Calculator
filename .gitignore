@@ -1,0 +1,65 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.git(old)/objects/1e/1b6fb93dcdd020e2ef890848b07e01bd439c67
+.git(old)/objects/27/29a90aaf7b99ab1fcd49f5413060069b6efa7f
+.git(old)/objects/4d/29575de80483b005c29bfcac5061cd2f45313e
+.git(old)/objects/4d/b7ebc25c2d066cd254805af5dda1ed1d2bc819
+.git(old)/objects/54/ef09430b11a9e551ddfe1107287e168c6f0e11
+.git(old)/objects/67/b208eaa903ee11e7c79c8ee117fdc81521a3c4
+.git(old)/objects/6b/60c1042f58d9fabb75485aa3624dddcf633b5c
+.git(old)/objects/74/b1a275a0ea7df518f17bcea5375abf003abe55
+.git(old)/objects/74/b5e053450a48a6bdb4d71aad648e7af821975c
+.git(old)/objects/85/afa48b161a2c12e82bd3191782320cc160b368
+.git(old)/objects/a4/e47a6545bc15971f8f63fba70e4013df88a664
+.git(old)/objects/aa/069f27cbd9d53394428171c3989fd03db73c76
+.git(old)/objects/b0/4b771a82613a80b0532d7082508763620074bf
+.git(old)/objects/bc/d5dfd67cd0361b78123e95c2dd96031f27f743
+.git(old)/objects/c0/74426ffce6c836c1b7a3e532d241a79d33de9c
+.git(old)/objects/ce/9cbd2946d6962cfc19d65c8cb91757d8f4d4c6
+.git(old)/objects/e9/e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e
+.git(old)/objects/ec/2585e8c0bb8188184ed1e0703c4c8f2a8419b0
+.git(old)/objects/f2/d2f95c60a3aea3044957510a6e088004d2090b
+.git(old)/objects/f5/185c1ec7a5dccf30b55a8e3f89afc3eca764a1
+.git(old)/objects/fc/44b0a3796c0e0a64c3d858ca038bd4570465d9
+.git(old)/refs/heads/master
+.git(old)/objects/08/0d6c77ac21bb2ef88a6992b2b73ad93daaca92
+.git(old)/logs/refs/heads/master
+.git(old)/logs/HEAD
+.git(old)/info/exclude
+.git(old)/index
+.git(old)/hooks/update.sample
+.git(old)/hooks/prepare-commit-msg.sample
+.git(old)/hooks/pre-receive.sample
+.git(old)/hooks/pre-rebase.sample
+.git(old)/hooks/pre-push.sample
+.git(old)/hooks/pre-commit.sample
+.git(old)/hooks/pre-applypatch.sample
+.git(old)/hooks/post-update.sample
+.git(old)/hooks/fsmonitor-watchman.sample
+.git(old)/hooks/commit-msg.sample
+.git(old)/hooks/applypatch-msg.sample
+.git(old)/HEAD
+.git(old)/description
+.git(old)/config
+.git(old)/COMMIT_EDITMSG
