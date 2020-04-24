@@ -1,5 +1,6 @@
 Free Code Camp Front End Library Challenge - JavaScript Calculator
 
+<img src="src/calculator.PNG" width="600" height="auto">
 See the live calculator here: 
 [JavaScript Calculator on CodePen](https://codepen.io/onegrumpybunny/full/LYVzeav)
 
